@@ -1,0 +1,29 @@
+name: Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: tests-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  # The provenance and asset tests are the ones that must never be skipped:
+  # they are what keeps the licensing claims in THIRD_PARTY_NOTICES.md honest.
+  # They need no heavy dependencies, so they run on a bare runner.
+  provenance:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - run: pip install pytest numpy
+      - run: python -m pytest tests/test_gmr_provenance.py tests/test_assets.py -q

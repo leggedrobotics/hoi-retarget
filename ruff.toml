@@ -1,0 +1,50 @@
+# Lint/format configuration, following the Robotic Systems Lab convention
+# (cf. leggedrobotics/rsl_rl), with two deliberate departures noted below.
+line-length = 120
+target-version = "py310"
+
+# `hoi_retarget/gmr/` is a vendored fork of GMR (MIT). Several files there are
+# byte-identical to upstream, and `tests/test_gmr_provenance.py` pins their
+# sha256 against it. Formatting them would break that pin and destroy the
+# attribution claim, so the whole subpackage is excluded from lint and format.
+extend-exclude = ["hoi_retarget/gmr"]
+
+[lint]
+select = [
+    "E", "W",   # pycodestyle
+    "F",        # pyflakes
+    "I",        # isort
+    "UP",       # pyupgrade
+    "B",        # flake8-bugbear
+    "SIM",      # flake8-simplify
+    "RUF",      # ruff
+]
+# Departure from rsl_rl: "D" (pydocstyle) and "ANN" (annotations) are not
+# enabled. This code was not written to those rules, and a lint set that fails
+# on every file is one nobody runs.
+ignore = [
+    "B006",    # mutable default — pervasive in the config dataclasses
+    "B008",    # function call in default argument
+    "E501",    # line length is handled by the formatter
+    "SIM108",  # a ternary is not always clearer
+    # The comments and docstrings use typographic characters deliberately —
+    # arrows in pipeline diagrams, box-drawing rules in CLI help, non-ASCII in
+    # author names. Flagging them as "ambiguous" is noise here.
+    "RUF001", "RUF002", "RUF003",
+    # `zip(strict=)` changes behaviour on ragged input rather than only
+    # documenting intent, so it is not a safe blanket edit on ported code.
+    "B905",
+    # Judgement calls that are not worth churning verified numerics for.
+    "SIM105",  # contextlib.suppress over try/except/pass
+    "SIM115",  # open() without a context manager (used for long-lived handles)
+    "SIM109",  # compare-with-tuple
+    "RUF005",  # collection-literal concatenation
+    "RUF059",  # unused unpacked variable (names document the tuple shape)
+    "E741",    # `l` as a loop variable, in maths-dense code
+]
+per-file-ignores = { "*/__init__.py" = ["F401"] }
+
+[lint.isort]
+section-order = ["future", "standard-library", "third-party", "first-party", "local-folder"]
+extra-standard-library = ["numpy", "typing_extensions"]
+known-first-party = ["hoi_retarget"]

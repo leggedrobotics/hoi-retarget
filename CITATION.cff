@@ -1,0 +1,110 @@
+cff-version: 1.2.0
+message: >-
+  If you use HOI-Retarget, please cite the paper. If you use the object meshes or
+  the source motions, please also cite OMOMO and InterMimic -- they are the rights
+  holders for the data this pipeline consumes.
+title: "HOI-Retarget: Contact-Centric Retargeting for Human-Object Interaction"
+abstract: >-
+  A contact-centric method that transfers human-object interaction onto a humanoid
+  robot for large-scale motion-data generation. Inverse kinematics maps the human
+  pose onto the robot and rescales the object into its reach; a windowed trajectory
+  optimization then recovers every labelled contact as a target in the object frame,
+  balanced against body tracking, foot support and smoothness under the robot's
+  kinematic limits. Because the targets are anchored to the object rather than to
+  the original human motion, the same formulation augments a single demonstration
+  across object sizes, absorbs contacts reconstructed from monocular video, and
+  extends to several robots manipulating one object.
+type: software
+license: BSD-3-Clause
+version: "1.0.0"
+repository-code: "https://github.com/shinben0327/hoi-retarget"
+url: "https://shinben0327.github.io/hoi-retarget"
+keywords:
+  - humanoid
+  - motion retargeting
+  - human-object interaction
+  - trajectory optimization
+  - motion capture
+  - Unitree G1
+authors:
+  - family-names: Shin
+    given-names: Jihwan
+    affiliation: "Robotic Systems Lab, ETH Zurich"
+  - family-names: "López Escoriza"
+    given-names: Adrià
+    affiliation: "Robotic Systems Lab, ETH Zurich"
+  - family-names: He
+    given-names: Junzhe
+    affiliation: "Robotic Systems Lab, ETH Zurich"
+  - family-names: Heyrman
+    given-names: Matthias
+    affiliation: "Robotic Systems Lab, ETH Zurich"
+  - family-names: Hutter
+    given-names: Marco
+    affiliation: "Robotic Systems Lab, ETH Zurich"
+
+# Replace `notes` with the arXiv identifier once the preprint is posted.
+preferred-citation:
+  type: article
+  title: "HOI-Retarget: Contact-Centric Retargeting for Human-Object Interaction"
+  year: 2026
+  notes: "Manuscript under review."
+  authors:
+    - family-names: Shin
+      given-names: Jihwan
+    - family-names: "López Escoriza"
+      given-names: Adrià
+    - family-names: He
+      given-names: Junzhe
+    - family-names: Heyrman
+      given-names: Matthias
+    - family-names: Hutter
+      given-names: Marco
+
+references:
+  - type: article
+    title: "Object Motion Guided Human Motion Synthesis"
+    authors:
+      - family-names: Li
+        given-names: Jiaman
+      - family-names: Wu
+        given-names: Jiajun
+      - family-names: Liu
+        given-names: "C. Karen"
+    journal: "ACM Transactions on Graphics (SIGGRAPH Asia)"
+    volume: 42
+    issue: 6
+    year: 2023
+    notes: "OMOMO -- source of the interaction motions and of the object meshes shipped here."
+    url: "https://github.com/lijiaman/omomo_release"
+  - type: conference-paper
+    title: "InterMimic: Towards Universal Whole-Body Control for Physics-Based Human-Object Interactions"
+    authors:
+      - family-names: Xu
+        given-names: Sirui
+      - family-names: Ling
+        given-names: "Hung Yu"
+      - family-names: Wang
+        given-names: "Yu-Xiong"
+      - family-names: Gui
+        given-names: "Liang-Yan"
+    collection-title: "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)"
+    year: 2025
+    notes: "InterMimic -- the re-processed OMOMO release this pipeline reads."
+    url: "https://github.com/Sirui-Xu/InterMimic"
+  - type: software
+    title: "GMR: General Motion Retargeting"
+    authors:
+      - family-names: Ze
+        given-names: Yanjie
+    year: 2025
+    license: MIT
+    notes: "The SMPL-X to humanoid IK retargeting that hoi_retarget/gmr/ forks."
+    url: "https://github.com/YanjieZe/GMR"
+  - type: software
+    title: "unitree_ros: Unitree Robotics robot descriptions"
+    authors:
+      - name: "HangZhou YuShu TECHNOLOGY CO., LTD. (Unitree Robotics)"
+    license: BSD-3-Clause
+    notes: "The G1 and H2 descriptions in assets/robots/."
+    url: "https://github.com/unitreerobotics/unitree_ros"

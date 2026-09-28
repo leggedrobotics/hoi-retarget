@@ -1,0 +1,82 @@
+Object assets in this directory — attribution
+=============================================
+
+These 39 files (13 `.urdf`, 13 `.obj`, 13 `sample_points.npy`) are redistributed
+from **InterMimic**, byte for byte. They are not our files, and they are not
+OMOMO's original mesh files either: the `.obj` are trimesh re-exports produced by
+InterMimic's own asset preparation, and the URDF wrappers and surface samples are
+InterMimic's work, not ours.
+
+    InterMimic: Towards Universal Whole-Body Control for Physics-Based
+    Human-Object Interactions
+    Sirui Xu, Hung Yu Ling, Yu-Xiong Wang, Liang-Yan Gui
+    IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2025
+    https://github.com/Sirui-Xu/InterMimic
+
+InterMimic is MIT-licensed, which permits this redistribution provided its notice
+travels with the files. That notice is reproduced in full below.
+
+The underlying object *geometry* originates with OMOMO, which InterMimic
+processed into this form. OMOMO is separately MIT-licensed and is cited below
+too. OMOMO ships 15 objects; `mop` and `vacuum` are articulated and are not part
+of this release, leaving the 13 the paper evaluates on.
+
+    Object Motion Guided Human Motion Synthesis
+    Jiaman Li, Jiajun Wu, C. Karen Liu
+    ACM Transactions on Graphics (SIGGRAPH Asia), 2023
+    https://github.com/lijiaman/omomo_release
+
+The OMOMO *motion capture* is NOT redistributed here — only the object assets.
+See THIRD_PARTY_NOTICES.md, section 3.
+
+-------------------------------------------------------------------------------
+InterMimic — MIT License
+-------------------------------------------------------------------------------
+
+MIT License
+
+Copyright (c) 2025 Sirui Xu
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+-------------------------------------------------------------------------------
+OMOMO — MIT License
+-------------------------------------------------------------------------------
+
+MIT License
+
+Copyright (c) 2023 Jiaman Li
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

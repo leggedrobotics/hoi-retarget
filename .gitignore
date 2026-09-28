@@ -1,0 +1,34 @@
+# Caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Build artefacts
+build/
+dist/
+*.egg-info/
+
+# Environments / editors
+.venv/
+venv/
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# Non-redistributable inputs: SMPL-X body models and the source motion datasets,
+# each under its own terms. No trailing slash, so a symlink is ignored too.
+assets/body_models
+data
+
+# Pipeline outputs
+outputs/
+videos/
+*.mp4
+MUJOCO_LOG.TXT
+
+# Local notes
+BUILD_STATE.md
+RELEASE_TODO.md

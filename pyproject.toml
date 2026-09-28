@@ -1,0 +1,93 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hoi-retarget"
+version = "1.0.0"
+description = "Contact-centric retargeting of human-object interaction onto humanoid robots"
+readme = { file = "README.md", content-type = "text/markdown" }
+license = "BSD-3-Clause"
+license-files = ["LICENSE", "hoi_retarget/gmr/LICENSE"]
+requires-python = ">=3.10"
+keywords = [
+    "robotics", "humanoid", "motion-retargeting",
+    "human-object-interaction", "trajectory-optimization", "motion-capture",
+]
+authors = [
+    { name = "Jihwan Shin", email = "jishin@ethz.ch" },
+    { name = "Adrià López Escoriza", email = "alopez@ethz.ch" },
+    { name = "Junzhe He", email = "junzhe@ethz.ch" },
+    { name = "Matthias Heyrman", email = "matthiashe@ethz.ch" },
+    { name = "Marco Hutter", email = "mahutter@ethz.ch" },
+]
+maintainers = [
+    { name = "Jihwan Shin", email = "jishin@ethz.ch" },
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Operating System :: POSIX :: Linux",
+]
+
+# Pinocchio and CasADi are most reliably installed from conda-forge; see
+# docs/INSTALL.md. The pip names are given here so `pip install -e .` works on
+# a system that already has a toolchain for them.
+dependencies = [
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "torch>=2.0",
+    "casadi>=3.6",
+    "pin>=2.7",              # Pinocchio
+    "mujoco>=3.1",
+    "mink>=0.0.4",           # differential IK on MuJoCo, used by the GMR stage
+    # PyPI 0.1.28 and git 0.1.28 are DIFFERENT code. The released build sizes
+    # shapedirs from the model file and returns `transl`; the PyPI one does
+    # neither, and a clean install then fails on the first clip. Pinned to the
+    # commit the released corpus was produced with.
+    "smplx @ git+https://github.com/vchoutas/smplx@1265df7ba545e8b00f72e7c557c766e15c71632f",
+    "trimesh>=4.0",
+    # [urdf] pulls yourdfpy, which viser.extras.ViserUrdf needs. Plain `viser`
+    # installs and imports fine, then hoi-retarget-view dies at first use.
+    "viser[urdf]>=0.2",
+    "imageio[ffmpeg]>=2.31",
+    "pillow>=10.0",
+    "rich>=13.0",
+    "loop_rate_limiters>=0.1",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4", "ruff>=0.14"]
+
+[project.urls]
+Homepage = "https://shinben0327.github.io/hoi-retarget"
+Repository = "https://github.com/shinben0327/hoi-retarget"
+Dataset = "https://huggingface.co/datasets/shinben0327/hoi-retarget"
+Issues = "https://github.com/shinben0327/hoi-retarget/issues"
+
+[project.scripts]
+hoi-retarget = "hoi_retarget.cli:main"
+hoi-retarget-view = "hoi_retarget.tools.view:main"
+hoi-retarget-render = "hoi_retarget.tools.render:main"
+hoi-retarget-render-batch = "hoi_retarget.tools.render_batch:main"
+hoi-retarget-render-source = "hoi_retarget.tools.render_source:main"
+hoi-retarget-edit-contacts = "hoi_retarget.contact.app.__main__:main"
+hoi-retarget-check-robot = "hoi_retarget.tools.check_robot_assets:main"
+hoi-retarget-stage-object = "hoi_retarget.datasets.object_assets:main"
+
+[tool.setuptools.packages.find]
+include = ["hoi_retarget*"]
+
+# assets/ (robots, objects) is 90 MB and sits beside the package, so it is NOT
+# packaged here. A wheel install needs HOI_RETARGET_ASSETS; see docs/INSTALL.md.
+[tool.setuptools.package-data]
+hoi_retarget = [
+    "gmr/ik_configs/*.json",
+    "gmr/LICENSE",
+    "tools/batch_retarget.sh",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
