@@ -7,11 +7,11 @@
 Jihwan Shin · Adrià López Escoriza · Junzhe He · Matthias Heyrman · Marco Hutter<br>
 Robotic Systems Lab, ETH Zürich
 
-[![Project page](https://img.shields.io/badge/Project-Page-1f6feb?style=for-the-badge&logo=githubpages&logoColor=white)](https://shinben0327.github.io/hoi-retarget/)
-[![Dataset](https://img.shields.io/badge/%F0%9F%A4%97%20Dataset-HOI--Retarget-ffb300?style=for-the-badge)](https://huggingface.co/datasets/shinben0327/hoi-retarget)
-[![3D viewer](https://img.shields.io/badge/%F0%9F%A4%97%20Space-3D%20viewer-ffd21e?style=for-the-badge)](https://huggingface.co/spaces/shinben0327/hoi-retarget-viewer)
-[![License](https://img.shields.io/badge/License-BSD--3--Clause-2e7d32?style=for-the-badge)](LICENSE)
-![Paper](https://img.shields.io/badge/Paper-under%20review-9e9e9e?style=for-the-badge)
+[![Project page](https://img.shields.io/badge/Project-Page-1f6feb?style=flat&logo=githubpages&logoColor=white)](https://shinben0327.github.io/hoi-retarget/)
+[![Dataset](https://img.shields.io/badge/%F0%9F%A4%97%20Dataset-HOI--Retarget-ffb300?style=flat)](https://huggingface.co/datasets/shinben0327/hoi-retarget)
+[![3D viewer](https://img.shields.io/badge/%F0%9F%A4%97%20Space-3D%20viewer-ffd21e?style=flat)](https://huggingface.co/spaces/shinben0327/hoi-retarget-viewer)
+[![License](https://img.shields.io/badge/License-BSD--3--Clause-2e7d32?style=flat)](LICENSE)
+![Paper](https://img.shields.io/badge/Paper-under%20review-9e9e9e?style=flat)
 
 <img src="docs/teaser.jpg" alt="Humanoid robots carrying, lifting and moving everyday objects, retargeted from human motion capture." width="100%">
 
@@ -22,11 +22,6 @@ per-body contact labels — into a humanoid trajectory that reproduces the **int
 not just the pose. Every labelled contact is a target in the **object frame**, recovered by
 a windowed trajectory optimization, so the robot grasps the same place on the object that
 the human did, at any object scale.
-
-On the 13 OMOMO object categories retargeted to a Unitree G1, the mean contact-point gap is
-**0.5 cm**, against **18.3 cm** for the closest interaction-aware baseline, at under a
-quarter of the compute (both with our object-mesh rescaling disabled, since neither baseline
-resizes the mesh — paper, Sec. IV-A).
 
 ## Method
 
