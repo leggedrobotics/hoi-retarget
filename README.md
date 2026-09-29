@@ -11,7 +11,7 @@ Robotic Systems Lab, ETH Zürich
 [![Dataset](https://img.shields.io/badge/%F0%9F%A4%97%20Dataset-HOI--Retarget-ffb300?style=flat)](https://huggingface.co/datasets/shinben0327/hoi-retarget)
 [![3D viewer](https://img.shields.io/badge/%F0%9F%A4%97%20Space-3D%20viewer-ffd21e?style=flat)](https://huggingface.co/spaces/shinben0327/hoi-retarget-viewer)
 [![License](https://img.shields.io/badge/License-BSD--3--Clause-2e7d32?style=flat)](LICENSE)
-![Paper](https://img.shields.io/badge/Paper-under%20review-9e9e9e?style=flat)
+[![Paper](https://img.shields.io/badge/Paper-arXiv%202609.34674-b31b1b?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2609.34674)
 
 <img src="docs/teaser.jpg" alt="Humanoid robots carrying, lifting and moving everyday objects, retargeted from human motion capture." width="100%">
 
@@ -139,8 +139,9 @@ BSD 3-Clause, Copyright (c) 2026, ETH Zurich.
   title   = {HOI-Retarget: Contact-Centric Retargeting for Human-Object Interaction},
   author  = {Shin, Jihwan and L\'opez Escoriza, Adri\`a and He, Junzhe and
              Heyrman, Matthias and Hutter, Marco},
+  journal = {arXiv preprint arXiv:2609.34674},
   year    = {2026},
-  note    = {Manuscript under review}
+  url     = {https://arxiv.org/abs/2609.34674}
 }
 ```
 

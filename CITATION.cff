@@ -43,12 +43,16 @@ authors:
     given-names: Marco
     affiliation: "Robotic Systems Lab, ETH Zurich"
 
-# Replace `notes` with the arXiv identifier once the preprint is posted.
 preferred-citation:
   type: article
   title: "HOI-Retarget: Contact-Centric Retargeting for Human-Object Interaction"
   year: 2026
-  notes: "Manuscript under review."
+  journal: "arXiv preprint arXiv:2609.34674"
+  url: "https://arxiv.org/abs/2609.34674"
+  identifiers:
+    - type: doi
+      value: 10.48550/arXiv.2609.34674
+      description: arXiv
   authors:
     - family-names: Shin
       given-names: Jihwan
