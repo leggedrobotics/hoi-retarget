@@ -172,7 +172,7 @@ shipped clouds have 340 and came that way, and CARI4D stages 500 of its own on f
 If you want retargeted trajectories rather than the means to produce them, they
 are published separately:
 
-<https://huggingface.co/datasets/shinben0327/hoi-retarget>
+<https://huggingface.co/datasets/leggedrobotics/hoi-retarget>
 
 6,952 motions across 5 source datasets and 2 robots, with per-link contact flags
 and QC metrics, under CC BY-NC-SA 4.0. `examples/to_pkl.py` in that repository

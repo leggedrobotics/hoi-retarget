@@ -63,9 +63,9 @@ dev = ["pytest>=7.4", "ruff>=0.14"]
 
 [project.urls]
 Homepage = "https://shinben0327.github.io/hoi-retarget"
-Repository = "https://github.com/shinben0327/hoi-retarget"
-Dataset = "https://huggingface.co/datasets/shinben0327/hoi-retarget"
-Issues = "https://github.com/shinben0327/hoi-retarget/issues"
+Repository = "https://github.com/leggedrobotics/hoi-retarget"
+Dataset = "https://huggingface.co/datasets/leggedrobotics/hoi-retarget"
+Issues = "https://github.com/leggedrobotics/hoi-retarget/issues"
 
 [project.scripts]
 hoi-retarget = "hoi_retarget.cli:main"

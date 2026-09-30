@@ -17,7 +17,7 @@ abstract: >-
 type: software
 license: BSD-3-Clause
 version: "1.0.0"
-repository-code: "https://github.com/shinben0327/hoi-retarget"
+repository-code: "https://github.com/leggedrobotics/hoi-retarget"
 url: "https://shinben0327.github.io/hoi-retarget"
 keywords:
   - humanoid

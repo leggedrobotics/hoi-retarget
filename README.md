@@ -8,8 +8,8 @@ Jihwan Shin · Adrià López Escoriza · Junzhe He · Matthias Heyrman · Marco 
 Robotic Systems Lab, ETH Zürich
 
 [![Project page](https://img.shields.io/badge/Project-Page-1f6feb?style=flat&logo=githubpages&logoColor=white)](https://shinben0327.github.io/hoi-retarget/)
-[![Dataset](https://img.shields.io/badge/%F0%9F%A4%97%20Dataset-HOI--Retarget-ffb300?style=flat)](https://huggingface.co/datasets/shinben0327/hoi-retarget)
-[![3D viewer](https://img.shields.io/badge/%F0%9F%A4%97%20Space-3D%20viewer-ffd21e?style=flat)](https://huggingface.co/spaces/shinben0327/hoi-retarget-viewer)
+[![Dataset](https://img.shields.io/badge/%F0%9F%A4%97%20Dataset-HOI--Retarget-ffb300?style=flat)](https://huggingface.co/datasets/leggedrobotics/hoi-retarget)
+[![3D viewer](https://img.shields.io/badge/%F0%9F%A4%97%20Space-3D%20viewer-ffd21e?style=flat)](https://huggingface.co/spaces/leggedrobotics/hoi-retarget-viewer)
 [![License](https://img.shields.io/badge/License-BSD--3--Clause-2e7d32?style=flat)](LICENSE)
 [![Paper](https://img.shields.io/badge/Paper-arXiv%202609.34674-b31b1b?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2609.34674)
 

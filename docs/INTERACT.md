@@ -6,7 +6,7 @@ InterMimic `.pt` format that OMOMO arrives in, so every dataset's contact labels
 from InterAct's own computation.
 
 **To use these four datasets, download the released corpus:**
-<https://huggingface.co/datasets/shinben0327/hoi-retarget>. This page records how it was
+<https://huggingface.co/datasets/leggedrobotics/hoi-retarget>. This page records how it was
 produced; the conversion tooling is not part of this repository.
 
 ## Licence
